@@ -28,13 +28,13 @@ remaining columns include PDV (percentage of daily value) values for calories, t
 
 ---
 
-| name                                 |     id |   minutes |   submitted |   n_steps |   n_tags |   rating |   rating_avg |   protein |   sodium |
-|:-------------------------------------|-------:|----------:|------------:|----------:|---------:|---------:|-------------:|----------:|---------:|
-| 1 brownies in the world    best ever | 333281 |        40 |     2008.84 |        10 |       14 |        4 |            4 |         3 |        3 |
-| 1 in canada chocolate chip cookies   | 453467 |        45 |     2011.3  |        12 |        9 |        5 |            5 |        13 |       22 |
-| 412 broccoli casserole               | 306168 |        40 |     2008.43 |         6 |       10 |        5 |            5 |        22 |       32 |
-| 412 broccoli casserole               | 306168 |        40 |     2008.43 |         6 |       10 |        5 |            5 |        22 |       32 |
-| 412 broccoli casserole               | 306168 |        40 |     2008.43 |         6 |       10 |        5 |            5 |        22 |       32 |
+| name                                 |   contributor_id |     id |   minutes |   submitted |   n_steps |   n_tags |   rating |   rating_avg |   protein |   sodium |
+|:-------------------------------------|-----------------:|-------:|----------:|------------:|----------:|---------:|---------:|-------------:|----------:|---------:|
+| 1 brownies in the world    best ever |           985201 | 333281 |        40 |     2008.84 |        10 |       14 |        4 |            4 |         3 |        3 |
+| 1 in canada chocolate chip cookies   |          1848091 | 453467 |        45 |     2011.3  |        12 |        9 |        5 |            5 |        13 |       22 |
+| 412 broccoli casserole               |            50969 | 306168 |        40 |     2008.43 |         6 |       10 |        5 |            5 |        22 |       32 |
+| 412 broccoli casserole               |            50969 | 306168 |        40 |     2008.43 |         6 |       10 |        5 |            5 |        22 |       32 |
+| 412 broccoli casserole               |            50969 | 306168 |        40 |     2008.43 |         6 |       10 |        5 |            5 |        22 |       32 |
 
 ---
 
@@ -43,7 +43,7 @@ remaining columns include PDV (percentage of daily value) values for calories, t
 
 <iframe src="assets/Distribution-of-minutes.html" width=800 height=600 frameBorder=0></iframe>
 
-Our first plot of the minute distribution showed some incredible outliers (over 1 million minute recipes) so I had to restrict the data frame to recipes under 5 hours. The distribution shows spikes in incriments of 5. This could be because people round their cooking times when posting reviews or recipes. 30 minutes is the most common recipe time.
+My first plot of the minute distribution showed some incredible outliers (over 1 million minute recipes) so I had to restrict the data frame to recipes under 5 hours. The distribution shows spikes in incriments of 5. This could be because people round their cooking times when posting reviews or recipes. 30 minutes is the most common recipe time.
 
 ### Bivariate Analysis
 
