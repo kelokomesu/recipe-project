@@ -38,6 +38,7 @@ remaining columns include PDV (percentage of daily value) values for calories, t
 
 ### Univariate Analysis
 
+<iframe src="assets/Distribution-of-minutes.html" width=800 height=600 frameBorder=0></iframe>
 
 Our first plot of the minute distribution showed some incredible outliers (over 1 million minute recipes) so I had to restrict the data frame to recipes under 5 hours. The distribution shows spikes in incriments of 5. This could be because people round their cooking times when posting reviews or recipes. 30 minutes is the most common recipe time.
 
@@ -50,7 +51,9 @@ This plot shows for each rating, the average time it takes to make the meal goes
 
 ### Interesting Aggregates
 
-'|     1.0 |     2.0 |    3.0 |     4.0 |     5.0 |\n|--------:|--------:|-------:|--------:|--------:|\n| 48.8497 | 48.8552 | 46.548 | 43.3839 | 43.0632 |'
+|     1.0 |     2.0 |     3.0 |    4.0 |     5.0 |
+|--------:|--------:|--------:|-------:|--------:|
+| 99.6725 | 98.0215 | 87.4976 | 91.585 | 106.926 |
 
 The mean for minutes taken is the lowest for ratings of 5.
 
@@ -82,7 +85,10 @@ However, the missingness of rating was not dependent on the sodium column. Here 
 
 # Hypothesis Testing
 
-'|    mean |   count |\n|--------:|--------:|\n| 4.68662 |  167548 |\n| 4.65804 |   51845 |'
+|    mean |   count |
+|--------:|--------:|
+| 4.68662 |  167548 |
+| 4.65804 |   51845 |
 
 Null Hypothesis: Cooking time of the recipe has no impact on the ratings of the recipe.
 
