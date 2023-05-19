@@ -1,11 +1,7 @@
----
-layout: page
-title: recipe-project
-description: Better Recipes are Shorter Recipes
-nav_exclude: true
----
-
 # Better Recipes are Shorter Recipes
+by Kelo Komesu
+
+## Introduction
 We will explore a dataset with information regarding food reviews from food.com. I will specifically be answering the question: Do recipes which take less time to make tend to recieve higher ratings? So if you want high reviews on a recipe you are posting, maybe think about how long it takes to make.
 
 ### Dataset Information
