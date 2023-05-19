@@ -67,7 +67,7 @@ The rating column could be NMAR because when poeple post their own recipes I dou
 
 ### Missingness dependency
 
-<iframe src="assets/missingness_sub_rate.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/ksdist.html" width=800 height=600 frameBorder=0></iframe>
 
 From this plot, we can see there is some difference between the date of submissions when the rating is missing and when the rating is included. So is this due to random chance or could another column be the reason we see a difference?
 
@@ -82,7 +82,6 @@ Then I did permutation sumulations to see how extreme this value is compared to 
 P-Value: 0.0015469194250300686
 
 I did not observe many simulations in which the ks-statistic was as extreme as our observed statistic. Thus we can conclude that the missingness of rating is not due to random chance and submission time may be a column upon which rating missingness is dependent on.
-
 
 However, the missingness of rating was not dependent on the sodium column. Here I observed a p-value of 0.5313155076819254. This means my simulations observed a ks-statistic as extreme or more extreme as our observed ks-statistic around 53% of the time. Thus, the missingness of rating does not depend on how much sodium is in the recipe.
 
@@ -103,6 +102,9 @@ Test Statistic: The difference in means between ratings of recipes with cooking 
 Significance Level: 0.01
 
 Resulting P-Value: 0.0
+
+
+### Conclusion
 
 In my hypothesis testing I used a permutation test to see if my two samples came from the same distribution or not. I used the difference in means test statistic because I needed to compare two distributions with the same shape. Our observed difference in means = 0.02858276372914048. Our closes observed simulated difference in mean value = 0.011768799556302945. Thus none of our simulated values were as extreme or more extreme than our observed value and I reject the null hypothesis. Cooking time under 60 seconds may increase your chance at a slightly higher rating.
 
