@@ -12,8 +12,10 @@ Our dataset has a total of 234,429 rows and 23 columns. Our relavent columns inc
 - tags: tags for recipe
 - n_steps: number of steps the recipe takes to make
 - n_ingredients: number of ingredients in recipe
+- n_tags: number of tags for recipe
 - rating: rating of review
 - rating_avg: avg rating given for recipe
+- submitted: date of submission in years
 remaining columns include PDV (percentage of daily value) values for calories, total fat, sugar, sodium, protein, saturated fat, and carbohydrates.
 
 ## Cleaning and EDA
@@ -22,17 +24,17 @@ remaining columns include PDV (percentage of daily value) values for calories, t
 - I made another column named 'rating_avg' so I could see the rating average of the recipe instead of just the single reviewers' rating.
 - The 'tags' column had values which looked like lists but were actually strings, so I converted those strings into actual lists with each list entry being a string of the tag.
 - The 'nutrition' column was also a string that looked like a list. So I converted the strings intro lists and made new columns for the nutrition values including, calories, protein, total fat, etc.
+- The 'submitted' column was converted from string type to years in decimal format.
 
 ---
 
-| name                                 |     id |   minutes | tags                                                                                                                                                                                                                        |   n_steps |   n_ingredients |   rating |   rating_avg |   calories |
-|:-------------------------------------|-------:|----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------:|----------------:|---------:|-------------:|-----------:|
-| 1 brownies in the world    best ever | 333281 |        40 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'for-large-groups', 'desserts', 'lunch', 'snacks', 'cookies-and-brownies', 'chocolate', 'bar-cookies', 'brownies', 'number-of-servings'] |        10 |               9 |        4 |            4 |      138.4 |
-| 1 in canada chocolate chip cookies   | 453467 |        45 | ['60-minutes-or-less', 'time-to-make', 'cuisine', 'preparation', 'north-american', 'for-large-groups', 'canadian', 'british-columbian', 'number-of-servings']                                                               |        12 |              11 |        5 |            5 |      595.1 |
-| 412 broccoli casserole               | 306168 |        40 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'side-dishes', 'vegetables', 'easy', 'beginner-cook', 'broccoli']                                                                        |         6 |               9 |        5 |            5 |      194.8 |
-| 412 broccoli casserole               | 306168 |        40 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'side-dishes', 'vegetables', 'easy', 'beginner-cook', 'broccoli']                                                                        |         6 |               9 |        5 |            5 |      194.8 |
-| 412 broccoli casserole               | 306168 |        40 | ['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'side-dishes', 'vegetables', 'easy', 'beginner-cook', 'broccoli']                                                                        |         6 |               9 |        5 |            5 |      194.8 |
-
+| name                                 |     id |   minutes |   submitted |   n_steps |   n_tags |   rating |   rating_avg |   protein |   sodium |
+|:-------------------------------------|-------:|----------:|------------:|----------:|---------:|---------:|-------------:|----------:|---------:|
+| 1 brownies in the world    best ever | 333281 |        40 |     2008.84 |        10 |       14 |        4 |            4 |         3 |        3 |
+| 1 in canada chocolate chip cookies   | 453467 |        45 |     2011.3  |        12 |        9 |        5 |            5 |        13 |       22 |
+| 412 broccoli casserole               | 306168 |        40 |     2008.43 |         6 |       10 |        5 |            5 |        22 |       32 |
+| 412 broccoli casserole               | 306168 |        40 |     2008.43 |         6 |       10 |        5 |            5 |        22 |       32 |
+| 412 broccoli casserole               | 306168 |        40 |     2008.43 |         6 |       10 |        5 |            5 |        22 |       32 |
 ---
 
 
