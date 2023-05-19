@@ -54,9 +54,9 @@ This plot shows for each rating, the average time it takes to make the meal goes
 
 ### Interesting Aggregates
 
-|     1.0 |     2.0 |     3.0 |    4.0 |     5.0 |
-|--------:|--------:|--------:|-------:|--------:|
-| 99.6725 | 98.0215 | 87.4976 | 91.585 | 106.926 |
+|         |     1.0 |     2.0 |     3.0 |    4.0 |     5.0 |
+|:--------|--------:|--------:|--------:|-------:|--------:|
+| minutes | 99.6725 | 98.0215 | 87.4976 | 91.585 | 106.926 |
 
 The mean for minutes taken is the lowest for ratings of 5.
 
@@ -89,10 +89,10 @@ However, the missingness of rating was not dependent on the sodium column. Here 
 
 # Hypothesis Testing
 
-|    mean |   count |
-|--------:|--------:|
-| 4.68662 |  167548 |
-| 4.65804 |   51845 |
+| over_sixty_minutes   |    mean |   count |
+|:---------------------|--------:|--------:|
+| False                | 4.68662 |  167548 |
+| True                 | 4.65804 |   51845 |
 
 Null Hypothesis: Cooking time of the recipe has no impact on the ratings of the recipe.
 
