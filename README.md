@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Project 3
-description: Description of Project 3.
+title: Better Recipes are Shorter Recipes
+description: Better Recipes are Shorter Recipes
 nav_exclude: true
 ---
 
 # Better Recipes are Shorter Recipes
-We will explore a dataset with information regarding food reviews from food.com. I will specifically be answering the question: Do shorter recipes tend to recieve higher ratings? So if you want high reviews on a recipe you are posting, maybe think about how long it takes to make.
+We will explore a dataset with information regarding food reviews from food.com. I will specifically be answering the question: Do recipes which take less time to make tend to recieve higher ratings? So if you want high reviews on a recipe you are posting, maybe think about how long it takes to make.
 
 ### Dataset Information
 Our dataset has a total of 234,429 rows and 23 columns. Our relavent columns include:
@@ -40,6 +40,76 @@ remaining columns include PDV (percentage of daily value) values for calories, t
 ---
 
 
-
+### Univariate Analysis
 
 <iframe src="assets/Distribution-of-minutes.html" width=800 height=600 frameBorder=0></iframe>
+
+Our first plot of the minute distribution showed some incredible outliers (over 1 million minute recipes) so I had to restrict the data frame to recipes under 5 hours. The distribution shows spikes in incriments of 5. This could be because people round their cooking times when posting reviews or recipes. 30 minutes is the most common recipe time.
+
+### Bivariate Analysis
+
+<iframe src="assets/minute-rating.html" width=800 height=600 frameBorder=0></iframe>
+
+This plot shows for each rating, the average time it takes to make the meal goes down. The rating of 5 has the lowest average time to make its recipes.
+
+
+### Interesting Aggregates
+
+'|     1.0 |     2.0 |    3.0 |     4.0 |     5.0 |\n|--------:|--------:|-------:|--------:|--------:|\n| 48.8497 | 48.8552 | 46.548 | 43.3839 | 43.0632 |'
+
+The mean for minutes taken is the lowest for ratings of 5.
+
+
+## Assessment of Missingness
+
+The rating column could be NMAR because when poeple post their own recipes I doubt they are rating it as well. So I would think that recipe submissions closer to 2008 had more missing ratings because people were posting their original recipes and not giving reviews.
+
+### Missingness dependency
+
+<iframe src="assets/missingness_sub_rate.html" width=800 height=600 frameBorder=0></iframe>
+
+From this plot, we can see there is some difference between the date of submissions when the rating is missing and when the rating is included. So is this due to random chance or could another column be the reason we see a difference?
+
+I used a ks-statistic to measure the farthest distance in our cumulative distribution functions for submission dates with ratings and without ratings. I did this by grouping the rows by missingness of rating and applying the ks-statistic method.
+
+Observed ks-statistic: 0.05580897823545494
+
+Then I did permutation sumulations to see how extreme this value is compared to simulated distributions of the ks-statistic.
+
+
+<iframe src="assets/ksdist.html" width=800 height=600 frameBorder=0></iframe>
+
+P-Value: 0.0015469194250300686
+
+I did not observe many simulations in which the ks-statistic was as extreme as our observed statistic. Thus we can conclude that the missingness of rating is not due to random chance and submission time may be a column upon which rating missingness is dependent on.
+
+
+However, the missingness of rating was not dependent on the sodium column. Here I observed a p-value of 0.5313155076819254. This means my simulations observed a ks-statistic as extreme or more extreme as our observed ks-statistic around 53% of the time. Thus, the missingness of rating does not depend on how much sodium is in the recipe.
+
+
+# Hypothesis Testing
+
+'|    mean |   count |\n|--------:|--------:|\n| 4.68662 |  167548 |\n| 4.65804 |   51845 |'
+
+Null Hypothesis: Cooking time of the recipe has no impact on the ratings of the recipe.
+
+Alternative Hypothesis: Cooking time under 60 minutes leads to higher ratings of the recipe.
+
+Test Statistic: The difference in means between ratings of recipes with cooking time under 60 minutes and over 60 minutes.
+
+Significance Level: 0.01
+
+Resulting P-Value: 0.0
+
+In my hypothesis testing I used a permutation test to see if my two samples came from the same distribution or not. I used the difference in means test statistic because I needed to compare two distributions with the same shape. Our observed difference in means = 0.02858276372914048. Our closes observed simulated difference in mean value = 0.011768799556302945. Thus none of our simulated values were as extreme or more extreme than our observed value and I reject the null hypothesis. Cooking time under 60 seconds may increase your chance at a slightly higher rating.
+
+
+
+
+
+
+
+
+
+
+
