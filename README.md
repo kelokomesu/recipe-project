@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Better Recipes are Shorter Recipes
+title: recipe-project
 description: Better Recipes are Shorter Recipes
 nav_exclude: true
 ---
@@ -42,7 +42,6 @@ remaining columns include PDV (percentage of daily value) values for calories, t
 
 ### Univariate Analysis
 
-<iframe src="assets/Distribution-of-minutes.html" width=800 height=600 frameBorder=0></iframe>
 
 Our first plot of the minute distribution showed some incredible outliers (over 1 million minute recipes) so I had to restrict the data frame to recipes under 5 hours. The distribution shows spikes in incriments of 5. This could be because people round their cooking times when posting reviews or recipes. 30 minutes is the most common recipe time.
 
