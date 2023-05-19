@@ -44,7 +44,7 @@ Our first plot of the minute distribution showed some incredible outliers (over 
 
 ### Bivariate Analysis
 
-
+<iframe src="assets/minute-rating.html" width=800 height=600 frameBorder=0></iframe>
 
 This plot shows for each rating, the average time it takes to make the meal goes down. The rating of 5 has the lowest average time to make its recipes.
 
@@ -64,6 +64,7 @@ The rating column could be NMAR because when poeple post their own recipes I dou
 
 ### Missingness dependency
 
+<iframe src="assets/missingness_sub_rate.html" width=800 height=600 frameBorder=0></iframe>
 
 From this plot, we can see there is some difference between the date of submissions when the rating is missing and when the rating is included. So is this due to random chance or could another column be the reason we see a difference?
 
@@ -73,7 +74,7 @@ Observed ks-statistic: 0.05580897823545494
 
 Then I did permutation sumulations to see how extreme this value is compared to simulated distributions of the ks-statistic.
 
-
+<iframe src="assets/ksdist.html" width=800 height=600 frameBorder=0></iframe>
 
 P-Value: 0.0015469194250300686
 
