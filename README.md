@@ -79,7 +79,7 @@ Then I did permutation sumulations to see how extreme this value is compared to 
 
 <iframe src="assets/missingness_sub_rate.html" width=800 height=600 frameBorder=0></iframe>
 
-P-Value: 0.0015469194250300686
+P-Value: 0.0
 
 I did not observe many simulations in which the ks-statistic was as extreme as our observed statistic. Thus we can conclude that the missingness of rating is not due to random chance and submission time may be a column upon which rating missingness is dependent on.
 
@@ -99,14 +99,14 @@ Alternative Hypothesis: Cooking time under 60 minutes leads to higher ratings of
 
 Test Statistic: The difference in means between ratings of recipes with cooking time under 60 minutes and over 60 minutes.
 
-Significance Level: 0.01
+Significance Level: 0.05
 
-Resulting P-Value: 0.0
+Resulting P-Value: 0.015373944967329578
 
 
 ### Conclusion
 
-In my hypothesis testing I used a permutation test to see if my two samples came from the same distribution or not. I used the difference in means test statistic because I needed to compare two distributions with the same shape. Our observed difference in means = 0.02858276372914048. Our closes observed simulated difference in mean value = 0.011768799556302945. Thus none of our simulated values were as extreme or more extreme than our observed value and I reject the null hypothesis. Cooking time under 60 seconds may increase your chance at a slightly higher rating.
+In my hypothesis testing I used a permutation test to see if my two samples came from the same distribution or not. I used the difference in means test statistic because I needed to compare two distributions with the same shape. Our observed difference in means = 0.02858276372914048. Our p-value shows that less than 5% of the resulting simulations resulted in a statistic as extreme or more extreme than our observed test statistic. Thus I reject the null hypothesis in favor of the alternative hypothesis. Cooking time under 60 seconds may increase your chance at a slightly higher rating.
 
 
 
