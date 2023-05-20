@@ -77,7 +77,7 @@ Observed ks-statistic: 0.05580897823545494
 
 Then I did permutation sumulations to see how extreme this value is compared to simulated distributions of the ks-statistic.
 
-<iframe src="assets/ksdist.html" width=800 height=600 frameBorder=0></iframe>
+<iframe src="assets/missingness_sub_rate.html" width=800 height=600 frameBorder=0></iframe>
 
 P-Value: 0.0015469194250300686
 
